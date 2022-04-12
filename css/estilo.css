@@ -13,12 +13,6 @@ body{
     background-color: #dddddd;
 }
 
-header{
-    height: 270px;
-    background-color: rgb(255, 255, 255);
-    padding: 10px 0;
-}
-
 footer{
     clear: both;
 }
@@ -31,6 +25,12 @@ footer{
     margin: 10px auto;
 }
 
+#header_main{
+    height: 270px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 0;
+}
+
 #head_content{
     height: 266px;
     width: 69%;
@@ -40,8 +40,9 @@ footer{
 }
 
 #head_content p{
-    padding: 5px;
+    padding: 5px 20px 5px 20px;
     text-indent: 30px;
+    text-align: justify;
 }
 
 #head_about_me{
@@ -81,14 +82,22 @@ footer{
 
 #head_about_me a{
     text-decoration: none;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #head_menu{
     height: 266px;
     width: 10%;
     float: left;
+}
+
+#head_menu #selected{
+    background-color: rgb(225, 255, 116);
+}
+
+#head_menu #selected:hover{
+    background-color: rgb(255, 208, 0);
 }
 
 #head_menu ul{
@@ -107,7 +116,51 @@ footer{
 }
 
 #head_menu li:hover{
-    background-color: white;
+    background-color: rgba(9, 172, 9, 0.795);
+}
+
+#body_content{
+    margin-top: 15px;
+    background: white;
+}
+
+#body_content_header_left{
+    padding: 20px;
+    float: left;
+}
+
+#body_content_header_left ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#body_content_header_left li{
+    display: inline;
+    padding: 0 15px 0 15px;
+    border-right: 2px solid black;
+}
+
+#body_content_header_left #list_end{
+    border: none;
+}
+
+#body_content_header_right{
+    float: right;
+}
+
+#body_content_post{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#body_content_footer{
+    text-align: right;
+}
+
+#post_container_end{
+    margin:0;
 }
 
 .centralize{
@@ -118,4 +171,66 @@ footer{
 .div_centralize{
     display: flex;
     justify-content: center;
+}
+
+.clear{
+    clear: both;
+}
+
+.post_container{
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.post_header .post_title{
+    width: 80%;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    float: left;
+    left: 10%;
+}
+
+.post_header .post_title h1{
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+
+.post_header .post_author{
+    text-align: center;
+    float: right;
+}
+
+.post_header .post_author h2{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.post_content{
+    margin: 20px 30px 20px 30px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 15px 0 15px 0;
+    clear: both;
+}
+
+.post_content img.img_centralize{
+    display: block;
+    width: 100px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+.post_footer .post_footer_left{
+    float: left;
+}
+
+.post_footer .post_footer_right{
+    float: right;
 }
