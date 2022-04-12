@@ -9,6 +9,49 @@
  
 }
 
+@keyframes head_li_anim{
+    from {
+        color: black;
+        border-color: black;
+        width: 100%;
+    }
+
+    to {
+        color: blue;
+        border-color: blue;
+        width: 120%;
+    }
+
+}
+
+@keyframes head_li_selected_anim{
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 120%;
+    }
+
+}
+
+@keyframes body_content_menu_anim{
+    from {
+        color: black;
+        background-color: white;
+        box-shadow: none;
+        padding: 0 15px 0 15px;
+    }
+
+    to {
+        color: white;
+        background-color: black;
+        padding: 5px 15px 5px 15px;
+        box-shadow: 0 0 30px 5px rgb(65, 65, 65);
+    }
+
+}
+
 body{
     background-color: #dddddd;
 }
@@ -63,6 +106,7 @@ footer{
 #head_about_me img.img_anim_bigger:hover{
     animation-name: head_img_anim;
     animation-duration: 0.5s;
+    animation-direction: normal;
     animation-fill-mode: forwards;
 }
 
@@ -92,12 +136,14 @@ footer{
     float: left;
 }
 
-#head_menu #selected{
-    background-color: rgb(225, 255, 116);
+#head_menu #head_menu_selected{
+    color: blue;
+    border-color: blue;
 }
 
-#head_menu #selected:hover{
-    background-color: rgb(255, 208, 0);
+#head_menu #head_menu_selected:hover{
+    animation-name: head_li_selected_anim;
+    animation-duration: 0.5s;
 }
 
 #head_menu ul{
@@ -110,13 +156,21 @@ footer{
     padding: 10px 2px 10px 2px;
     margin-bottom: 5px;
     text-align: center;
-    background-color: rgb(115 255 116 / 36%);
-    border: 2px solid black;
-    border-radius: 40px;
+    border-bottom: 2px solid black;
+    border-radius: 8px;
 }
 
 #head_menu li:hover{
-    background-color: rgba(9, 172, 9, 0.795);
+    animation-name: head_li_anim;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+#head_menu a{
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
 }
 
 #body_content{
@@ -139,6 +193,20 @@ footer{
     display: inline;
     padding: 0 15px 0 15px;
     border-right: 2px solid black;
+}
+
+#body_content_header_left a{
+    color: black;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+#body_content_header_left a:hover{
+    border-radius: 40px;
+    animation-name: body_content_menu_anim;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
 }
 
 #body_content_header_left #list_end{
