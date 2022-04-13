@@ -40,14 +40,13 @@
         color: black;
         background-color: white;
         box-shadow: none;
-        padding: 0 15px 0 15px;
     }
 
     to {
         color: white;
         background-color: black;
         padding: 5px 15px 5px 15px;
-        box-shadow: 0 0 30px 5px rgb(65, 65, 65);
+        box-shadow: 0 0 30px 2px rgb(65, 65, 65);
     }
 
 }
@@ -56,8 +55,12 @@ body{
     background-color: #dddddd;
 }
 
-footer{
+#footer{
     clear: both;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px 0 5px 0;
 }
 
 #container
@@ -72,6 +75,7 @@ footer{
     height: 270px;
     background-color: rgb(255, 255, 255);
     padding: 10px 0;
+    border-radius: 15px;
 }
 
 #head_content{
@@ -176,6 +180,8 @@ footer{
 #body_content{
     margin-top: 15px;
     background: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 #body_content_header_left{
@@ -191,7 +197,7 @@ footer{
 
 #body_content_header_left li{
     display: inline;
-    padding: 0 15px 0 15px;
+    padding: 0px 15px 0px 15px;
     border-right: 2px solid black;
 }
 
@@ -215,6 +221,17 @@ footer{
 
 #body_content_header_right{
     float: right;
+    padding: 10px 15px;
+}
+
+#body_content_header_right select{
+    appearance: none;
+    margin: 0;
+    text-align: center;
+}
+
+#body_content_header_right select:hover{
+
 }
 
 #body_content_post{
@@ -249,9 +266,10 @@ footer{
     margin-bottom: 20px;
     padding: 10px;
     width: 100%;
-    border: 2px solid black;
+    border: 2px solid dodgerblue;
     border-radius: 10px;
     box-sizing: border-box;
+    box-shadow: -5px 5px 5px darkgrey;
 }
 
 .post_header .post_title{
@@ -284,8 +302,18 @@ footer{
     margin: 20px 30px 20px 30px;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
-    padding: 15px 0 15px 0;
+    padding: 15px 0 0 0;
     clear: both;
+}
+
+.link_read_more{
+    text-decoration: none;
+    color: darkslategray;
+    font-weight: bold;
+}
+
+.link_read_more:hover{
+    color: blue;
 }
 
 .post_content img.img_centralize{
