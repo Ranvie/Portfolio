@@ -51,8 +51,13 @@
 
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
-    background-color: #dddddd;
+    background-color: #071b3c;
 }
 
 #footer{
@@ -105,6 +110,7 @@ body{
 #head_about_me img{
     width: 50px;
     display: inline;
+    margin-bottom: 15px;
 }
 
 #head_about_me img.img_anim_bigger:hover{
@@ -126,6 +132,10 @@ body{
     -ms-transform: translate(-50%, 0);
     -o-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
+}
+
+#head_about_me p{
+    margin-bottom: 15px;
 }
 
 #head_about_me a{
@@ -199,6 +209,14 @@ body{
     display: inline;
     padding: 0px 15px 0px 15px;
     border-right: 2px solid black;
+}
+
+#body_content_header_left #body_menu_selected{
+    color: #00e7ff;
+    background-color: black;
+    padding: 5px 15px 5px 15px;
+    border-radius: 40px;
+    box-shadow: -2px 2px 5px 1px gray;
 }
 
 #body_content_header_left a{
