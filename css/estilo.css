@@ -93,8 +93,48 @@ body{
 
 #head_content p{
     padding: 5px 20px 5px 20px;
-    text-indent: 30px;
     text-align: justify;
+}
+
+#head_content .section_biography p{
+    text-indent: 30px;
+}
+
+#head_content section.section_formation{
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-left: 30px;
+    border-bottom: 2px solid lightblue;
+}
+
+#head_content section#section_last{
+    width: 70%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-left: 30px;
+    border: none;
+}
+
+#head_content .course_title{
+    margin-left: 30px;
+    color: rgb(87, 98, 255);
+    font-weight: bold;
+}
+
+#head_content .institution{
+    margin: 0;
+    padding: 0;
+    margin-left: 70px;
+    margin-bottom: 5px;
+    color: green;
+    font-weight: bold;
+}
+
+#head_content .conclusion{
+    color: gray;
+    font-weight: 500;
+    margin-left: 50px;
 }
 
 #head_about_me{
@@ -195,6 +235,10 @@ body{
     border-top-right-radius: 15px;
 }
 
+#body_content header{
+    overflow: hidden;
+}
+
 #body_content_header_left{
     padding: 20px;
     float: left;
@@ -210,7 +254,6 @@ body{
     display: inline;
     padding: 0px 15px 0px 15px;
     border-right: 2px solid black;
-    cursor: pointer;
 }
 
 #body_content_header_left .body_menu_selected{
@@ -226,6 +269,7 @@ body{
     text-decoration: none;
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
 
 #body_content_header_left a:hover{
@@ -258,10 +302,12 @@ body{
     width: 95%;
     margin: auto;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 #body_content_footer{
     text-align: right;
+    clear: both;
 }
 
 #post_container_end{
@@ -324,15 +370,63 @@ body{
     border-bottom: 1px solid gray;
     padding: 15px 0 0 0;
     clear: both;
+    text-align: left;
 }
 
-.link_read_more{
+.post_content h2{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.post_content p{
+    text-indent: 30px;
+}
+
+.post_content .break{
+    margin-top: 15px;
+}
+
+.post_content ol{
+    margin: 15px;
+}
+
+.post_content .post_img_default_center{
+    width: 150px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post_content .post_img_default2x_center{
+    width: 300px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post_content .post_img_default_left{
+    width: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.post_content legend{
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.link_default{
     text-decoration: none;
     color: darkslategray;
     font-weight: bold;
 }
 
-.link_read_more:hover{
+.link_default:hover{
     color: blue;
 }
 
@@ -341,6 +435,8 @@ body{
     width: 100px;
     border: 1px solid black;
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .post_footer .post_footer_left{
@@ -348,5 +444,66 @@ body{
 }
 
 .post_footer .post_footer_right{
+    float: right;
+}
+
+.project_container{
+    margin-bottom: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 10px;
+    width: 40%;
+    min-width: 460px;
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: -5px 5px 5px darkgrey;
+    display: inline-block;
+}
+
+.project_header{
+    font-weight: bold;
+    text-align: left;
+}
+
+.project_content{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.project_description{
+    margin-bottom: 20px;
+}
+
+.project_content_roadmap{
+    margin-bottom: 20px;
+}
+
+.project_content_roadmap a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 2px;
+    background-color: rgb(0, 217, 255);
+    border-radius: 25%;
+}
+
+.project_content_roadmap a:hover{
+    color: rgb(0, 0, 0);
+}
+
+.project_footer{
+
+}
+
+.project_footer_left{
+    width: 40%;
+    float: left;
+}
+
+.project_footer_right{
+    width: 40%;
     float: right;
 }
