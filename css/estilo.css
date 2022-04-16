@@ -150,12 +150,12 @@ body{
     float: left;
 }
 
-#head_menu #head_menu_selected{
+#head_menu .head_menu_selected{
     color: blue;
     border-color: blue;
 }
 
-#head_menu #head_menu_selected:hover{
+#head_menu .head_menu_selected:hover{
     animation-name: head_li_selected_anim;
     animation-duration: 0.5s;
 }
@@ -178,6 +178,7 @@ body{
     animation-name: head_li_anim;
     animation-duration: 0.4s;
     animation-fill-mode: forwards;
+    cursor: pointer;
 }
 
 #head_menu a{
@@ -209,9 +210,10 @@ body{
     display: inline;
     padding: 0px 15px 0px 15px;
     border-right: 2px solid black;
+    cursor: pointer;
 }
 
-#body_content_header_left #body_menu_selected{
+#body_content_header_left .body_menu_selected{
     color: #00e7ff;
     background-color: black;
     padding: 5px 15px 5px 15px;
@@ -252,7 +254,7 @@ body{
 
 }
 
-#body_content_post{
+#body_content_container{
     width: 95%;
     margin: auto;
     margin-bottom: 20px;

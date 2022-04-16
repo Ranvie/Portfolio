@@ -11,6 +11,12 @@
 
         <link rel="stylesheet" type="text/css" href="css/estilo.css">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <script src="jQuery/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+
+        <!--[if lt IE 9]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <![endif]-->
 
     </head>
 
@@ -28,8 +34,8 @@
                         <p class="centralize">Rangel Vieira Perico</p>
                         
                         <div class="div_centralize">
-                            <a href="https://github.com/Ranvie"><img src="img/github.png" class="centralize img_anim_bigger" alt="GitHub" title="Acessar meu GitHub"></a>
-                            <a href="https://www.linkedin.com/in/Ranvie"><img src="img/linkedin.png" class="centralize img_anim_bigger" alt="LinkedIn" title="Acessar meu LinkedIn"></a>
+                            <a href="https://github.com/Ranvie" target="_blank"><img src="img/github.png" class="centralize img_anim_bigger" alt="GitHub" title="Acessar meu GitHub"></a>
+                            <a href="https://www.linkedin.com/in/Ranvie" target="_blank"><img src="img/linkedin.png" class="centralize img_anim_bigger" alt="LinkedIn" title="Acessar meu LinkedIn"></a>
                         </div>
 
                     </div>
@@ -41,7 +47,7 @@
                     <p>
                         Nascido em Araçatuba, em 08 de agosto de 2001, começou a se interessar pela área de tecnologia quando ganhou seu primeiro computador em 2013.
                     </p>
-
+                    
                     <p>
                         Ao fazer seu primeiro curso de informática básica aos 12 anos, conheceu vários conceitos da computação e veio a se aprofundar posteriormente em um curso técnico, em 2018, ministrado no IFSP campus Birigui, onde conheceu diversos conceitos mais avançados que abrangem vários campos, como redes, hardware, software, gestão e outros.
                     </p>
@@ -54,10 +60,10 @@
                 <nav id="head_menu" class="div_centralize">
 
                     <ul>
-                        <a href="#"><li id="head_menu_selected">Biografia</li></a>
-                        <a href="#"><li>Formações</li></a>
-                        <a href="#"><li>Experiência</li></a>
-                        <a href="#"><li>Contato</li></a>
+                        <a onclick="UpdateDiv.update('#head_content', 'pages/biography.html', 'biography', 'head_menu_selected')"><li id="biography" class="head_menu_selected">Biografia</li></a>
+                        <a onclick="UpdateDiv.update('#head_content','pages/formation.html', 'formation', 'head_menu_selected')"><li id="formation">Formações</li></a>
+                        <a onclick="UpdateDiv.update('#head_content','pages/experience.html', 'experience', 'head_menu_selected')"><li id="experience">Experiência</li></a>
+                        <a onclick="UpdateDiv.update('#head_content','pages/contact.html', 'contact', 'head_menu_selected')"><li id="contact">Contato</li></a>
                     </ul>
 
                 </nav>
@@ -70,13 +76,13 @@
                 
                     <div id="body_content_header_left">
                         <ul>
-                            <li><a href="#" id="body_menu_selected">Postagens</a></li>
-                            <li id="list_end"><a href="#">Projetos</a></li>
+                            <li><a id="post" class="body_menu_selected" onclick="UpdateDiv.update('#body_content_container', 'pages/post.html', 'post', 'body_menu_selected')">Postagens</a></li>
+                            <li><a id="project" onclick="UpdateDiv.update('#body_content_container', 'pages/project.html', 'project', 'body_menu_selected')">Projetos</a></li>
                         </ul>
                     </div>
 
                     <div id="body_content_header_right">
-                        Mostrar: #
+                        <span>Mostrar: #</span>
                         <select name="content_to_show">
                             <option value="5">5</option>
                             <option value="10">10</option>
@@ -87,7 +93,7 @@
 
                 </header> 
 
-                <section id="body_content_post" class="clear">
+                <section id="body_content_container" class="clear">
                     
                     <article class="post_container">
 
@@ -105,88 +111,9 @@
 
                         <section class="post_content">
 
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus autem iure perferendis sed quasi iusto ab earum obcaecati quo quaerat at inventore neque eveniet amet, fugit dicta. Nisi, sapiente quas?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus autem iure perferendis sed quasi iusto ab earum obcaecati quo quaerat at inventore neque eveniet amet, fugit dicta. Nisi, sapiente quas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores vel repellendus tempora, eos minus dolore. Autem aperiam eos atque enim sint! Modi sed autem alias aspernatur veritatis, placeat ipsum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, soluta, cum atque officia voluptas esse est quisquam aut praesentium provident inventore eum corrupti commodi ratione animi, repellat vel hic possimus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum soluta libero dignissimos fugiat iste voluptatibus earum sed, rerum illum odio, laboriosam eius optio voluptas debitis dolore fugit reiciendis laborum delectus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos corporis quod quam saepe ducimus minus facilis distinctio, nostrum explicabo reprehenderit aperiam accusamus unde odit provident corrupti fugit incidunt illo molestiae.</p>
                             <img class="img_centralize" src="img/template.png">
-
-                            <a href="" class="link_read_more">Ler mais</a>
-
-                        </section>
-
-                        <footer class="post_footer">
-
-                            <div class="post_footer_left">
-                                Criado em: <time>xx/xx/xxxx xx:xx</time>
-                            </div>
-
-                            <div class="post_footer_right">
-                                Última atualização: <time>xx/xx/xxxx xx:xx</time>
-                            </div>
-
-                            <div class="clear"></div>
-
-                        </footer>
-
-                    </article>
-
-                    <article class="post_container">
-
-                        <header class="post_header"> 
-                            
-                            <div class="post_title">
-                                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                            </div>
-
-                            <div class="post_author">
-                                <h2>Autor: Rangel</h2>
-                            </div>
-
-                        </header>
-
-                        <section class="post_content">
-
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus autem iure perferendis sed quasi iusto ab earum obcaecati quo quaerat at inventore neque eveniet amet, fugit dicta. Nisi, sapiente quas?</p>
-                            <img class="img_centralize" src="img/template.png">
-
-                            <a href="" class="link_read_more">Ler mais</a>
-
-                        </section>
-
-                        <footer class="post_footer">
-
-                            <div class="post_footer_left">
-                                Criado em: <time>xx/xx/xxxx xx:xx</time>
-                            </div>
-
-                            <div class="post_footer_right">
-                                Última atualização: <time>xx/xx/xxxx xx:xx</time>
-                            </div>
-
-                            <div class="clear"></div>
-
-                        </footer>
-
-                    </article>
-
-                    <article class="post_container" id="#post_container_end">
-
-                        <header class="post_header"> 
-                            
-                            <div class="post_title">
-                                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-                            </div>
-
-                            <div class="post_author">
-                                <h2>Autor: Rangel</h2>
-                            </div>
-
-                        </header>
-
-                        <section class="post_content">
-
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus autem iure perferendis sed quasi iusto ab earum obcaecati quo quaerat at inventore neque eveniet amet, fugit dicta. Nisi, sapiente quas?</p>
-                            <img class="img_centralize" src="img/template.png">
-
-                            <a href="" class="link_read_more">Ler mais</a>
+                            <a class="link_read_more">Ler mais</a>
 
                         </section>
 
