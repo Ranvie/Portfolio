@@ -373,7 +373,17 @@ body{
     text-align: left;
 }
 
+.post_content h1{
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
 .post_content h2{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.post_content h3{
     font-size: 18px;
     margin-bottom: 15px;
 }
@@ -382,8 +392,12 @@ body{
     text-indent: 30px;
 }
 
-.post_content .break{
+.post_content .break_top{
     margin-top: 15px;
+}
+
+.post_content .break_bottom{
+    margin-bottom: 15px;
 }
 
 .post_content ol{
@@ -506,4 +520,8 @@ body{
 .project_footer_right{
     width: 40%;
     float: right;
+}
+
+.text_color_red{
+    color: red;
 }
