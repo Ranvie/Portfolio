@@ -15,7 +15,18 @@ function set_up_read_more(){
 }
 
 function read_more(e){
-    alert(e.id);
+    id = e.id.match(/\d+/g);
+    var temp = document.getElementById("post#"+id);
+    
+    if(temp.getAttribute("class") == "post_content collapsed"){
+        temp.setAttribute("class", "post_content expanded");
+        e.textContent="Ler menos";
+    }
+    else{
+        temp.setAttribute("class", "post_content collapsed");
+        e.textContent="Ler mais";
+    }
+
 }
 
 var UpdateDiv = {
