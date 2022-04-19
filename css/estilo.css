@@ -367,10 +367,19 @@ body{
 .post_content{
     margin: 20px 30px 20px 30px;
     border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
     padding: 15px 0 0 0;
     clear: both;
     text-align: left;
+}
+
+.collapsed{
+    height: 150px;
+    overflow: hidden;
+}
+
+.expanded{
+    height: fit-content;
+    overflow: visible;
 }
 
 .post_content h1{
@@ -438,10 +447,19 @@ body{
     text-decoration: none;
     color: darkslategray;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .link_default:hover{
     color: blue;
+}
+
+.post_content_bottom{
+    border-bottom: 1px solid gray;
+    display: block;
+    text-align: center;
+    margin: 0 30px 20px 30px;
+    width: 95%;
 }
 
 .post_content img.img_centralize{
