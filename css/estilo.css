@@ -399,6 +399,7 @@ body{
 
 .post_content p{
     text-indent: 30px;
+    text-align: justify;
 }
 
 .post_content .break_top{

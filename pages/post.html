@@ -3,6 +3,163 @@
     <header class="post_header"> 
         
         <div class="post_title">
+            <h1>Aula sobre Requisitos e Modelo de Casos de Uso</h1>
+        </div>
+
+        <div class="post_author">
+            <h2>Autor: Rangel</h2>
+        </div>
+
+    </header>
+
+    <section class="post_content collapsed">
+        
+        <h1>Levantamento de requisitos, o que é?</h1>
+        <p>
+            Esse é um processo de suma importância feito sempre na primeira etapa de todo projeto, 
+            nele são debatidos junto a parte interessada, o que deve conter em determinada aplicação. Tais informações
+            devem ser muito bem especificadas e são documentadas para serem utilizadas posteriormente. Dependendo do tipo
+            de metodologia aplicada ao projeto, essa fase ocorre uma ou mais vezes até a entrega final do produto.
+        </p>
+        <p>
+            Para melhor compreender os requisitos, existem alguns tipos que são gerados enquanto nas fases de planejamento,
+            e eles podem ser agrupados em:
+        </p>
+        <ol>
+            <li>Funcionais</li>
+            <li>Não funcionais</li>
+            <li>Usuário</li>
+            <li>Sistema</li>
+        </ol>
+
+        <h2>Requisitos de Usuário</h2>
+        <p>
+            São aqueles ditos pela parte interessada, da qual muitas vezes não tem conhecimento técnico, mas precisa de 
+            determinadas funções em um produto. Por exemplo, uma página que permite a criação e login de usuários,
+            fazer postagens, comentários, mostrar notificações a aqueles que acessarem e outras funcionalidades. 
+            São genéricos e não especificam como deve ser feito, apenas o objetivo da funcionalidade.
+        </p>
+
+        <h2 class="break_top">Requisitos de Sistema</h2>
+        <p>
+            Já são feitos pelo time de desenvolvimento, que especificam de forma abstrata como determinada funcionalidade
+            deve ser implementada, utilizando de determinadas ferramentas, linguagens e afins. Envolve a modelação de
+            como o sistema deverá funcionar, com quais dados ele contará, os tipos dos dados e outras informações pertinentes
+            para a implementação.
+        </p>
+
+        <h2 class="break_top">Requisitos Funcionais</h2>
+        <p>
+            São aqueles que alteram diretamente o funcionamento de um sistema e definem exatamente quais tarefas e funções
+            que o mesmo terá, de forma específica e abstrata para cada item dos requisitos de sistema.
+        </p>
+
+        <h2 class="break_top">Requisitos Não Funcionais</h2>
+        <p>
+            São importantes, mas não implementam nada ao sistema diretamente, como por exemplo, verificações legais, 
+            os <em>stackholders</em> pedirem uma interface bonita e intuitiva, a utilização de determinados padrões
+            impostos pelo cliente e diversos outros exemplos.
+        </p>
+
+        <img src="../post/post_3/img/requisitos_nao_funcionais.png" class="post_img_default2x_center" alt="Alguns exemplos de requisitos não funcionais">
+        <legend>Exemplos de requisitos não funcionais. Disponível em: &lt;https://docs.google.com/presentation/d/1Oxc47eupagmMn6kNpWrObO3RBi_aiucu/edit#slide=id.p4&gt;. Acesso em: 29 abr. 2022.</https:></legend>
+
+        <h1>Tipos de requisitos com FURPS+</h1>
+        <p>
+            Como já deve ter percebido, os requisitos tratam de diversas categorias diferentes e sem uma organização
+            fica difícil de dizer do que se trata e qual sua contribuição ao projeto. Por conta disto, o modelo FURPS+
+            foi criado. Seu propósito é categorizar requisitos de modo a facilitar a compreensão dos mesmos e dizer
+            qual utilidade terá dentro de um projeto.
+        </p>
+        <p>
+            Existem os seguintes tipos:
+        </p>
+        <ol>
+            <li>Funcionalidade (Functionality)</li>
+            <li>Usabilidade (Usability)</li>
+            <li>Confiabilidade (Reliability)</li>
+            <li>Desempenho (Performance)</li>
+            <li>Suportabilidade (Supportability)</li>
+        </ol>
+
+        <h2>Funcionalidade</h2>
+        <p>Característica definida, capacidades, a generalidade, a segurança.</p>
+
+        <h2 class="break_top">Usabilidade</h2>
+        <p>Fatores humanos, estética, coerência, documentação.</p>
+
+        <h2 class="break_top">Confiabilidade</h2>
+        <p>Gravidade de frequência de falha, de capacidade de recuperação, a previsibilidade, a rigor, tempo médio para falha.</p>
+
+        <h2 class="break_top">Desempenho</h2>
+        <p>Velocidade, eficiência, tempo de resposta de consumo, taxa de transferência de recursos.</p>
+
+        <h2 class="break_top">Suportabilidade</h2>
+        <p>Testabilidade, extensabilidade, adaptatibilidade, facilidade de manutenção, compatibilidade, configurabilidade, facilidade de manutenção, instalabilidade, localizabilidade, portabilidade.</p>
+
+        <p class="break_top">O termo "+" no nome FURPS se refere a outros aspectos como implementação, interface, operações e questões legais.</p>
+
+        <h1>Casos de uso</h1>
+        <p>
+            Essa é uma ferramenta, textual, muito interessante, com ela é possível definir atores e ações para completar
+            determinadas tarefas em um sistema, como implementação de uma nova função. Por mais seja geralmente encontrado em versão gráfica,
+            os autores dizem que este é um modelo textual de documentos, não diagramático, portanto vou estar tratando da versão em tabelas. 
+            Uma prática muito comum, chamada caso de uso caixa preta, é descrever de forma como o usuário descreveria 
+            uma determinada função. Por exemplo, ao dizer que um botão deve registrar um novo usuário, não se deve dizer 
+            como, nem o processo para isto acontecer, apenas, o que o botão faz, e neste caso, registrar uma nova conta. 
+            Existe também o caso de uso caixa branca, que é uma maneira completa de se descrever como um processo deve 
+            ocorrer para concluir aquela ação.
+        </p>
+
+        <img src="../post/post_3/img/casos_de_uso.png" class="post_img_default2x_center" alt="Exemplo gráfico de casos de uso">
+        <legend>Exemplo de um caso de uso gráfico (por mais que a ferramenta seja textual). Disponível em: &lt;https://pt.wikipedia.org/wiki/Diagrama_de_caso_de_uso&gt;. Acesso em: 29 abr. 2022</legend>
+
+        <p>
+            A sua formalidade pode ser separada em:
+        </p>
+
+        <ol>
+            <li>Resumido: um parágrafo (caso de sucesso)</li>
+            <li>Informal: múltiplos parágrafos (vários cenários)</li>
+            <li>Completo: descrição detalhada de condições e garantias de sucesso</li>
+        </ol>
+
+        <p>
+            Neste modelo existem os fluxos e desvios. Isso significa que a modelação já presupõe eventos que podem levar
+            a resultados diferentes. Por exemplo, caso o usuário não digite um valor válido em uma caixa que apenas aceite
+            dígitos.
+        </p>
+
+        <img src="../post/post_3/img/casos_de_uso_2.png" class="post_img_default2x_center" alt="Exemplo textual de um caso de uso">
+        <legend>Exemplo de um caso de uso em formato de tabela. Disponível em: &lt;https://slideplayer.com.br/slide/368247/&gt;. Acesso em: 29 abr. 2022</legend>
+
+    </section>
+
+    <section class="post_content_bottom">
+        <a class="link_default link_read_more" onclick="read_more(this)">Ler mais</a>
+    </section>
+
+    <footer class="post_footer">
+
+        <div class="post_footer_left">
+            Criado em: <time>29/04/2022 01:22</time>
+        </div>
+
+        <div class="post_footer_right">
+            Última atualização: <time>29/04/2022 11:56</time>
+        </div>
+
+        <div class="clear"></div>
+
+    </footer>
+
+</article>
+
+<article class="post_container">
+
+    <header class="post_header"> 
+        
+        <div class="post_title">
             <h1>Palestra na matéria de Engenharia de Software: Ferramentas de Pesquisa</h1>
         </div>
 
