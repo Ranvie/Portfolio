@@ -1,5 +1,0 @@
-C) Durante a execucao do projeto se conclui que as atividades OA e PAM sofrerao atrasos de 4 e 8 semanas respectivamente. Sera necessario fazer algum ajuste no projeto para que a data final nao seja comprometida? Por que?
-
-R: Sera necessario, pois, a folga posterior a elas vale 0, e neste caso, havera atraso de entrega.
-
-(Sem acentuacao pois o arquivo nao esta em UTF 8)
