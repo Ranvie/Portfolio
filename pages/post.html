@@ -3,7 +3,166 @@
     <header class="post_header"> 
         
         <div class="post_title">
-            <h1>Mais alguns detalhes sobre o Projeto de Software</h1>
+            <h1>Análise de Riscos - 12/05/2022</h1>
+        </div>
+
+        <div class="post_author">
+            <h2>Autor: Rangel</h2>
+        </div>
+
+    </header>
+
+    <section class="post_content collapsed">
+        
+        <h1>Os riscos em um projeto</h1>
+
+        <p class="break_top">
+            Essa etapa busca levantar os possíveis problemas que podem ocorrer durante a vida de um projeto. Por exemplo,
+            perder alguém da equipe, eventuais percas de dados e equipamentos, mudanças no mercado que podem fazer o cliente
+            querer outras funcionalidades, dentre diversos outros.
+        </p>
+        <p>
+            É importante fazer esse levantamento pois, quando já temos em mente o que pode ocorrer, podemos criar possíveis
+            soluções, que evitam de termos que lidar com o fator surpresa, afinal, temos uma data estipulada para a entrega de
+            um produto e atrasos implicam em custos e insatisfação do cliente.
+        </p>
+        <p>
+            Podemos fazer estimativas de risco a partir de:
+        </p>
+
+        <ol class="break_top">
+            <li>Experiência</li>
+            <li>Acesso à informações históricas</li>
+            <li>Dados qualitativos (não há medição ou métricas, apenas eventos)</li>
+        </ol>
+
+        <p class="break_top">Vale ressaltar que nenhum deles é exato por serem influenciadas por variáveis humanas, externas e afins.</p>
+
+        <h1 class="break_top">Problemas que surgem ao fazer estimativas</h1>
+
+        <p class="break_top">
+            Ao utilizar estes valores, estamos correndo o risco de cometer erros, mas ainda sim, é melhor que tentar dizer
+            valores aleatórios. É necessário ficar atento a alguns detalhes quanto a essas estimativas, dos quais se seguem:
+        </p>
+
+        <ol class="break_top">
+            <li>O grau de incerteza das medidas</li>
+            <li>Escopo mal compreendido</li>
+            <li>Interessados que mudam o escopo do projeto</li>
+        </ol>
+
+        <p class="break_top">
+            Grande parte dos problemas está contido nos dados e a sua qualidade, afinal, quanto menor a precisão deles,
+            menos confiáveis são, mas como dito anteriormente, os problemas não são apenas internos (equipe, projeto),
+            a parte interessada (clientes geralmente), apresenta grandes riscos quanto à estabilidade do produto, visto que
+            podem começar a exigir mudanças que não são compatíveis com o projeto, e isso gera problemas complexos de serem
+            resolvidos, o que consome tempo, recursos, etc.
+        </p>
+        <p>
+            Os fatores que aumentam os riscos em um projeto são a complexidade, o tamanho e o grau de estruturação. A
+            complexidade vai depender da abstração feita no projeto, pois, ao se quebrar um problema em frações menores,
+            se reduz a complexidade do mesmo, e fica mais simples de resolver. O tamanho, afinal, quanto maior, mais mão de obra,
+            tempo e recursos é necessária, o que abre brechas para riscos internos e externos. E o grau de estruturação, que tem
+            bastante a ver com tudo que a Engenharia de Software fala, um projeto sem um "norte" é como um navio que 
+            fica à deriva e pode vir a encalhar em algum momento.
+        </p>
+        <p>
+            Para diminuir os riscos são necessários dados históricos, que dizem de forma precisa, como um processo foi feito,
+            quanto tempo levou, a mão de obra utilizada e fatores do tipo, que descrevem o esforço de uma tarefa. Dessa forma é
+            possível, por exemplo, a utilizar ferramentas como as métricas de pontos de função, e garantir dados mais próximos da 
+            realidade, sem ter um grau de incerteza tão alto. Claro, as habilidades das pessoas mudam com o tempo, e também seu desempenho
+            (seja para melhor ou pior), então é necessário ajustar estes valores sempre que um projeto terminar.
+        </p>
+        <p>
+            Caso não seja possível ter dados de muita qualidade, ainda sim é possível tentar:
+        </p>
+
+        <ol class="break_top">
+            <li>Aumentar as estimativas (Se obter 7 meses, peça 9, por exemplo)</li>
+            <li>Técnicas de decomposição para cálculo</li>
+            <li>Modelo empírico (experiências passadas)</li>
+            <li>Ferramentas de estimativa</li>
+        </ol>
+
+        <p class="break_top">
+            No caso das técnicas de decomposição, pode-se fazer um planejamento utilizando os pontos de função. Para isso
+            é necessário decompor o problema de grande complexidade, em menores frações, então, com o auxílio da fórmula:
+        </p>
+
+        <p class="break_top">
+            E = (a + 4b + c)/6, onde a = valor otimista, b = valor provável e c = valor pessimista.
+        </p>
+
+        <p class="break_top">
+            Retorna um valor um pouco mais "embasado" do que apenas tentar chutar um valor e passar ao cliente.
+        </p>
+
+        <h1 class="break_top">Redes PERT-CPM</h1>
+        
+        <p class="break_top">
+            Esse é um modelo gráfico de representação de tarefas e eventos. Em outras palavras, com ele podemos descrever,
+            por exemplo, o início de um projeto, seu fim e todo seu corpo, dizendo suas tarefas e o tempo que cada uma levou.
+            Também representa a sequência lógica dessas tarefas, sendo elas lineares, dependentes ou paralelas.
+        </p>
+        <p>
+            A parte mais interessante desse modelo é o fato de nos trazer cálculos que mostram o tanto de tempo que podemos
+            atrasar em determinadas tarefas, sem que alterem o cronograma final do projeto. Assim como também nos mostra,
+            <span class="text_color_red">o caminho crítico</span>, que nos diz onde no projeto temos as tarefas mais sensíveis,
+            das quais, não se pode ter, quase nenhum ou nenhum, atraso, e que caso aconteça, implicam no atraso total do produto.
+        </p>
+        <p>
+            Temos alguns conceitos neste modelo, e são eles o cedo, o tarde, a folga do evento e o caminho crítico que foi dito anteriormente.
+            O cedo é o tempo mínimo que o projeto levará para ser concluído e é calculado por max(cedo anterior + duração),
+            do qual se inicia no primeiro evento e termina no último evento. O tarde é o tempo máximo que cada evento pode levar sem
+            atrasar as datas de entrega do produto, é calculado por min(tarde posterior - duração). A folga é o tempo de sobra que 
+            cada evento tem antes de atrasar as entregas, e é calculado por tarde-cedo. E o caminho crítico que é o trajeto 
+            (início ao fim) com as menores folgas, das quais, a soma das durações de cada tarefa é igual ao cedo do último
+            evento.
+        </p>
+        <p>
+            Um exemplo feito em sala de aula pode ser visualizado a seguir. Em cores verdes estão os cedos, 
+            azuis são os tardes, vermelho a folga e o caminho crítico e em preto as durações de cada tarefa.
+        </p>
+
+        <img src="post/post_6/img/exemplo_1.png" class="post_img_default2x_center" alt="Imagem de exemplo sobre o PERT-CPM">
+        <legend>Exemplo dado em sala de aula. Disponível em: &lt;https://docs.google.com/presentation/d/1TwOUI7Ww3yvTfNIuA2QpVTb8VZ-qBP0N/edit#slide=id.p29&gt;. Acesso em: 13 maio 2022.</legend>
+
+        <h1 class="break_top">Atividades complementares</h1>
+        <p>
+            Alguns exercícios foram passados durante a aula, sobre o PERT-CPM, então a medida que forem sendo concluídos,
+            estarão disponíveis no seguinte diretório:
+        </p>
+
+        <a href="post/post_6/atividades/" target="_blank"><img src="post/post_6/img/diretorio.png" class="post_img_default_left" alt="Link para o diretório"></a>
+
+    </section>
+
+    <section class="post_content_bottom">
+        <a class="link_default link_read_more" onclick="read_more(this)">Ler mais</a>
+    </section>
+
+    <footer class="post_footer">
+
+        <div class="post_footer_left">
+            Criado em: <time>13/05/2022 15:17</time>
+        </div>
+
+        <div class="post_footer_right">
+            Última atualização: <time>13/05/2022 17:26</time>
+        </div>
+
+        <div class="clear"></div>
+
+    </footer>
+
+</article>
+
+<article class="post_container">
+
+    <header class="post_header"> 
+        
+        <div class="post_title">
+            <h1>Mais alguns detalhes sobre o Projeto de Software - 05/05/2022</h1>
         </div>
 
         <div class="post_author">
@@ -96,6 +255,11 @@
             pontuação de custo e tempo estimados do software. 
         </p>
 
+        <h1>Atividade sobre pontos de função</h1>
+        <p>Durante a aula uma atividade para testar o cálculo de pontos de função foi dada, e pode ser vista a seguir:</p>
+
+        <a href="post/post_5/pdf/exercicio_1.pdf"><img src="post/post_5/img/pdf.png" class="post_img_default_left" alt="Link para a atividade"></a>
+        
     </section>
 
     <section class="post_content_bottom">
@@ -109,7 +273,7 @@
         </div>
 
         <div class="post_footer_right">
-            Última atualização: <time>06/05/2022 17:21</time>
+            Última atualização: <time>13/05/2022 17:33</time>
         </div>
 
         <div class="clear"></div>
@@ -123,7 +287,7 @@
     <header class="post_header"> 
         
         <div class="post_title">
-            <h1>Aula sobre Projeto de Software</h1>
+            <h1>Aula sobre Projeto de Software - 28/04/2022</h1>
         </div>
 
         <div class="post_author">
@@ -144,7 +308,7 @@
             interfaces, nomes de variáveis, tabelas em bancos de dados desconexas com os demais e diversos outros problemas
             que com certeza afetarão a qualidade final do produto.
         </p>
-        <img src="post/post_4/dramatizacao_projeto_software.png" class="post_img_default2x_center" alt="Dramatização entre a diferença de softwares que possuem e não possuem projeto">
+        <img src="post/post_4/img/dramatizacao_projeto_software.png" class="post_img_default2x_center" alt="Dramatização entre a diferença de softwares que possuem e não possuem projeto">
         <legend>Dramatização da importância do Projeto de Software. Disponível em: &lt;https://docs.google.com/presentation/d/1_4DEr6vwFU6redoT8yYc2jrQDgFk-fWB/edit#slide=id.p6&gt;. Acesso em: 30 abr. 2022.</legend>
 
         <h2 class="break_top">Os tipos de projeto</h2>
@@ -191,6 +355,13 @@
             enquanto a cor vermelha trás força, paixão, raiva e outros. Essa área de estudo se chama Psicologia das Cores.
         </p>
 
+        <h1 class="break_top">Atividade proposta em sala de aula</h1>
+        <p>
+            Enquanto em sala de aula, uma atividade foi passada, onde foi pedido para sugerirmos ao exemplo do Talk to Me um layout e um dicionário
+            de dados, de acordo com os conteúdos ministrados em sala.
+        </p>
+        <a href="post/post_4/pdf/Atividade_Proposta.pdf" target="_blank"><img src="post/post_4/img/pdf.png" class="post_img_default_left" alt="PDF contendo a atividade proposta"></a>
+
     </section>
 
     <section class="post_content_bottom">
@@ -204,7 +375,7 @@
         </div>
 
         <div class="post_footer_right">
-            Última atualização: <time>30/04/2022 20:46</time>
+            Última atualização: <time>13/05/2022 16:22</time>
         </div>
 
         <div class="clear"></div>
@@ -218,7 +389,7 @@
     <header class="post_header"> 
         
         <div class="post_title">
-            <h1>Aula sobre Requisitos e Modelo de Casos de Uso</h1>
+            <h1>Aula sobre Requisitos e Modelo de Casos de Uso - 21/04/2022</h1>
         </div>
 
         <div class="post_author">
@@ -361,7 +532,7 @@
         </div>
 
         <div class="post_footer_right">
-            Última atualização: <time>29/04/2022 11:56</time>
+            Última atualização: <time>13/05/2022 14:50</time>
         </div>
 
         <div class="clear"></div>
@@ -375,7 +546,7 @@
     <header class="post_header"> 
         
         <div class="post_title">
-            <h1>Palestra na matéria de Engenharia de Software: Ferramentas de Pesquisa</h1>
+            <h1>Palestra na matéria de Engenharia de Software: Ferramentas de Pesquisa - 14/04/2022</h1>
         </div>
 
         <div class="post_author">
@@ -445,7 +616,7 @@
         </div>
 
         <div class="post_footer_right">
-            Última atualização: <time>16/04/2022 21:09</time>
+            Última atualização: <time>13/05/2022 14:38</time>
         </div>
 
         <div class="clear"></div>
@@ -459,7 +630,7 @@
     <header class="post_header"> 
         
         <div class="post_title">
-            <h1>Meu primeiro dia na matéria de Engenharia de Software</h1>
+            <h1>Meu primeiro dia na matéria de Engenharia de Software - 07/04/2022</h1>
         </div>
 
         <div class="post_author">
@@ -518,7 +689,7 @@
         </div>
 
         <div class="post_footer_right">
-            Última atualização: <time>16/04/2022 18:13</time>
+            Última atualização: <time>13/05/2022 14:37</time>
         </div>
 
         <div class="clear"></div>
