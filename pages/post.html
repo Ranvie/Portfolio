@@ -3,6 +3,158 @@
     <header class="post_header"> 
         
         <div class="post_title">
+            <h1>Gerência de Configuração de Software (GCS) - 19/05/2022</h1>
+        </div>
+
+        <div class="post_author">
+            <h2>Autor: Rangel</h2>
+        </div>
+
+    </header>
+
+    <section class="post_content collapsed">
+        
+        <h1>O que é feito durante esta etapa?</h1>
+        <p>
+            Este momento no projeto é caracterizado pelas alterações que ocorrem durante toda a vida útil de um software,
+            das quais, podem ser por exemplo, a estrutura dos dados, alterações no código fonte, mudanças nas ferramentas usadas e
+            diversos outros.
+        </p>
+        <p>
+            Isto ocorre pois, um software não fica "parado no tempo", sempre existem modificações a serem feitas, das quais,
+            <strong>sempre</strong> afetam a estrutura de dados e o código fonte, afinal, ao alterar um o outro terá efeitos colaterais e
+            consequentemente precisará ser alterado também.
+        </p>
+        <p>
+            Existem vários motivos para se alterar um software, mas, os mais comuns são:
+        </p>
+
+        <ol>
+            <li>Novas condições de negócio</li>
+            <li>Novas necessidades</li>
+            <li>Reorganização e/ou crescimento</li>
+            <li>Restrições de orçamento ou cronograma</li>
+        </ol>
+
+        <p>
+            Portanto, é necessário ter o controle do que se foi alterado, tendo controle de versões e modificações, garantir
+            que estas sejam aplicadas ao projeto e relatando o que foi feito.
+        </p>
+        <p>
+            Imagine que existem diversos artefatos gerados durante a criação de um software (especificações, planos de projeto,
+            arquivos de código fonte, casos e planos de testes, manuais, arquivos de dados e muitos outros), dos quais se referem
+            a uma versão específica do projeto (conhecida como baseline, vou entrar em detalhes mais a frente). É necessário saber
+            o que se refere ao que, uma vez que, um problema no código fonte implica ter que voltar um backup, por exemplo. Nada
+            garante que funcionará, pois, a estrutura do banco de dados poderá ter mudado, gerando incompatibilidades e causando
+            mais problemas. Por isso, a GCS nos diz que devemos:
+        </p>
+        <ol>
+            <li>Identificar os itens de configuração</li>
+            <li>Gerir modificações em um ou mais destes itens</li>
+            <li>Facilitar a construção de diferentes versões do mesmo produto</li>
+            <li>Garantir a qualidade do software a medida que a configuração é feita ao longo do tempo</li>
+        </ol>
+
+        <h1 class="break_top">Itens de Configuração de Software (ICS)</h1>
+        <p>
+            Como citado anteriormente, é necessário saber quem são esses itens. Mas afinal, o que eles são? Simples,
+            são a menor porção de dados no GCS. Em outras palavras, cada item individual, como um arquivo de código fonte,
+            modelos de uso, modelos entidade-relacionamento e diversos outros. Que são gerados durante todo o processo da
+            engenharia de software, no caso dos artefatos, porém é completamente válido se considerar as ferramentas usadas
+            no desenvolvimento (navegadores, editores de texto, IDEs, compiladores e afins), que podem mudar a qualquer momento
+            trazendo incompatibilidades ou funções que os devs desconhecem, trazendo vários problemas também.
+        </p>
+        <p>
+            Neste caso, cada item deve ter identificadores próprios, contendo nome, descrição, lista de recursos, data e
+            outros, que sirvam como metadados para aquele determinado item. Isto facilita na catalogação de cada um e trás
+            o benefício de, em eventuais erros do sistema, a consulta destes. Não ficando limitado ao código fonte e banco
+            de dados.
+        </p>
+        <p>
+            Quando catalogamos esses itens e fazemos uma espécie de versão, criamos um ponto de retorno, do qual possui algo
+            como uma <em>snapshot</em> do projeto, que pode ser acessada em casos onde é necessária uma ação rápida para não
+            afetar os negócios dos clientes, por exemplo. Este ponto é chamado de <em>baseline</em>, ou linha de referência e
+            como dito anteriomente, indica um estado completo de uma versão do software, contendo todos os artefatos exatamente
+            como o software foi implementado.
+        </p>
+        <p>
+            Assim como todo outro artefato, os ICS podem (e devem, na medida do possível) ser:
+        </p>
+        <ol>
+            <li>Identificados</li>
+            <li>Analisados</li>
+            <li>Corrigidos</li>
+            <li>Aprovados</li>
+            <li>Armazenados como uma configuração de software</li>
+        </ol>
+
+        <h1 class="break_top">Repositórios</h1>
+        <p>
+            Este é um conceito utilizado no versionamento, geralmente atrelado aos códigos fontes. Um exemplo pode ser o git
+            que permite fazer alterações em um projeto, mantendo diferentes versões que podem ser acessadas em casos de falha em uma
+            atualização, das quais criam uma imagem do projeto naquele momento. Elas possuem dados como: o que foi alterado, quem alterou,
+            a data da alteração e diversos outros. Os repositórios podem estar localmente (git) ou remotamente (github).
+        </p>
+        <p>
+            Alguns termos são usados quanto aos repositórios, podendo citar o <em>lock</em>, que é um estado onde apenas um
+            usuário pode alterar o código fonte por vez, <em>check-out</em> (pull, no git) que baixa as últimas alterações feitas
+            em um repositório e <em>check-in</em> (push, no git) que envia alterações e/ou inserções ao repositório remoto.
+        </p>
+        <p>
+            Existem diversos momentos que alterações podem ser feitas no repositório, por exemplo:
+        </p>
+        <img src="post/post_7/img/artefatos_repositorio.png" class="post_img_default2x_center" alt="Imagem de exemplo de alterações no repositório">
+        <legend>Momentos de alterações no repositório. Disponível em: &lt;https://docs.google.com/presentation/d/1xc5ruErjl8SYH5lYB9LAeEgs_3RYMNnSRFxQl36sPY0/edit#slide=id.g12cc734bfec_0_236&gt;. Acesso em: 20 maio 2022.</legend>
+
+        <h1 class="break_top">Tarefas de gerenciamento</h1>
+        <ol>
+            <li>Definir como implementar o processo</li>
+            <li>Identificar quais itens vão ser gerenciados</li>
+            <li>
+                Controle
+                <ol>
+                    <li>Mudanças</li>
+                    <li>Versões</li>
+                </ol>
+            </li>
+            <li>Relato de como aconteceu, o que foi feito, quem será afetado</li>
+            <li>Fiscalização de se os procedimentos estão sendo seguidos</li>
+            <li>Controle de mão de obra terceirizada (CMM)</li>
+        </ol>
+
+        <h1>Atividade em sala de aula</h1>
+        <p>
+            Por fim, após o intervalo, a atividade proposta foi para aqueles que não tivessem muito conhecimento sobre
+            o git, a utilizassem e tivessem uma primeira experiência com essa ferramenta tão amplamente utilizada.
+        </p>
+
+    </section>
+
+    <section class="post_content_bottom">
+        <a class="link_default link_read_more" onclick="read_more(this)">Ler mais</a>
+    </section>
+
+    <footer class="post_footer">
+
+        <div class="post_footer_left">
+            Criado em: <time>20/05/2022 12:09</time>
+        </div>
+
+        <div class="post_footer_right">
+            Última atualização: <time>20/05/2022 13:58</time>
+        </div>
+
+        <div class="clear"></div>
+
+    </footer>
+
+</article>
+
+<article class="post_container">
+
+    <header class="post_header"> 
+        
+        <div class="post_title">
             <h1>Análise de Riscos - 12/05/2022</h1>
         </div>
 
