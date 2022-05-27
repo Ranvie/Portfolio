@@ -3,6 +3,167 @@
     <header class="post_header"> 
         
         <div class="post_title">
+            <h1>Engenharia Reversa - 27/05/2022</h1>
+        </div>
+
+        <div class="post_author">
+            <h2>Autor: Rangel</h2>
+        </div>
+
+    </header>
+
+    <section class="post_content collapsed">
+        
+        <h1>O que é a engenharia reversa?</h1>
+        <p>
+            Esse é um processo que visa descobrir como um software funciona, e se faz bastante útil principalmente quando
+            não se há nada concreto sobre o mesmo. A engenharia reversa geralmente acontece quando não se tem nada sobre o 
+            sistema, sejam códigos fonte, estruturas de dados e etc. Neste caso, a função do desenvolvedor será tentar 
+            entender o que está sendo feito, seguindo um caminho oposto ao da engenharia progressiva
+        </p>
+
+        <h2 class="break_top">Abstração</h2>
+        <p>
+            Esse termo se refere a ignorar informações que não são importantes para um projeto e dar ênfase naquelas que
+            são relevantes. Isto é útil em um ambiente no qual não se tem conhecimento de um sistema, por exemplo, e este
+            possui muitas funções. Neste ponto, é necessário tentar entender a <strong>intenção</strong> do desenvolvedor.  
+        </p>
+        <p>
+            Existem dois termos mais utilizados neste caso:
+        </p>
+        <ul class="break_top">
+            <li>
+                Nível de abstração
+                <p>Quanto mais informações de um produto, menor o grau de abstração, o que torna se torna mais específico</p>
+            </li>
+            <li>
+                Grau de abstração
+                <p>O quão específica é a informação</p>
+            </li>
+        </ul>
+
+        <p class="break_top">
+            Assim como a engenharia progressiva, a reversa possui alguns passos definidos, que são:
+        </p>
+        <ol class="break_top">
+            <li>
+                Implementacional
+                <p>Ideias de como funciona</p>
+            </li>
+            <li>
+                Estrutural
+                <p>Detalhes da linguagem de programação</p>
+            </li>
+            <li>
+                Funcional
+                <p>Funções e operações que o software faz</p>
+            </li>
+            <li>
+                Domínio
+                <p>Total conhecimento sobre como funciona, então constrói com o que foi aprendido</p>
+            </li>
+        </ol>
+
+        <h2 class="break_top">Propósitos da engenharia reversa:</h2>
+        <ul>
+            <li>Manutenção</li>
+            <li>
+                Reuso
+                <p>
+                    Partes do código podem ser reutilizadas em outros locais, portanto, as seguintes atividades
+                    são feitas a fim de verificar se pode ou não ser reusado:
+                </p>
+                <ol>
+                    <li>Reconhecimento</li>
+                    <li>Decomposição</li>
+                    <li>Classificação</li>
+                    <li>Seleção</li>
+                    <li>Adaptação</li>
+                    <li>Composição</li>
+                </ol>
+            </li>
+            <li>
+                Garantia da Qualidade de Software
+                <p>Está em conformidade com os requisitos funcionais</p>
+            </li>
+        </ul>
+
+        <h1>O que é a ReEngenharia?</h1>
+        <p>
+            Por exemplo, vamos dizer que alguém foi contratado para fazer a manutenção
+            em um sistema, do qual não possui documentação alguma. A primeira coisa que terá de fazer é entender como ele funciona,
+            indo de informações de um grau de abstração menor para um maior, uma vez que os dados já estão sendo usados, mas terá
+            de descobrir qual a função deles no sistema, como se estivesse levantando requisitos.
+        </p>
+
+        <h2 class="break_top">Redocumentação</h2>
+        <p>
+            Esse processo acontece em sistemas que não possuem documentos, no caso, requisitos, projetos de interface, etc.
+            Neste caso, o desenvolvedor pega um sistema já pronto e começa a tentar ter um visão mais geral, saindo dos dados e
+            chegando aos requisitos.
+        </p>
+        <p>
+            Para auxiliar este momento, existem algumas técnicas:
+        </p>
+        <ol>
+            <li>
+                Visualização do código
+                <ul>
+                    <li>Program Slicing</li>
+                    <li>Análise de dependência</li>
+                </ul>
+            </li>
+            <li>
+                Entendimento do programa
+                <ul>
+                    <li>Conhecimento do domínio das informações externas</li>
+                    <li>Pattern Matching</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h1 class="break_top">O que é Reuso de software?</h1>
+        <p>
+            Sistemas já prontos, podem possuir componentes reutilizáveis, que podem ser integrados a outros softwares e
+            trazer além de velocidade ao andamento do projeto, mais segurança, uma vez que estes elementos já foram previamente
+            testados (ou espera-se), não tendo que se preocupar com a criação destes.
+        </p>
+
+        <h1 class="break_top">A engenharia reversa infringe a lei da propriedade intelectual?</h1>
+        <p>
+            Isso depende do contexto e do proprietário. Em casos onde o dono do software é a própria empresa, obviamente
+            não há problemas, agora, em casos onde outra organização possui os direitos, esta tem total detenção do mesmo,
+            mesmo que o código tenha sido escrito por seus funcionários. Neste caso, cópias para estudo são legais, entretanto,
+            sua utilização indevida (distribuição, clonagem, afins) é proibida.
+        </p>
+
+    </section>
+
+    <section class="post_content_bottom">
+        <a class="link_default link_read_more" onclick="read_more(this)">Ler mais</a>
+    </section>
+
+    <footer class="post_footer">
+
+        <div class="post_footer_left">
+            Criado em: <time>27/05/2022 10:53</time>
+        </div>
+
+        <div class="post_footer_right">
+            Última atualização: <time>27/05/2022 12:26</time>
+        </div>
+
+        <div class="clear"></div>
+
+    </footer>
+
+</article>
+
+<article class="post_container">
+
+    <header class="post_header"> 
+        
+        <div class="post_title">
             <h1>Gerência de Configuração de Software (GCS) - 19/05/2022</h1>
         </div>
 
