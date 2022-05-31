@@ -1,75 +1,102 @@
-window.onload = function(){
-    UpdateDiv.update('#head_content', 'pages/biography.html', 'biography', 'head_menu_selected'); 
-    UpdateDiv.update('#body_content_container', 'pages/post.html', 'post', 'body_menu_selected');
+$(document).ready(function(){
+    update_page_and_menu_selection('#head_content', 'pages/biography.html', 'biography', 'head_menu_selected');
+    update_page_and_menu_selection('#body_content_container', 'pages/post.html', 'post', 'body_menu_selected', 'post_content', 'link_read_more');
+});
+
+function update_page_and_menu_selection(load_page_at, page_to_load, add_selection_to, menu_selection_class, containerClass="", linkClass="")
+{
+    load_page_and_read_more(load_page_at, page_to_load, containerClass, linkClass);
+    remove_menu_selection(menu_selection_class);
+    set_menu_selection(add_selection_to, menu_selection_class);
 }
 
-function set_up_read_more(){
-    var postElem = document.getElementsByClassName("post_content");
-    var postLink = document.getElementsByClassName("link_read_more");
+function load_page_and_read_more(load_page_at, page_to_load, containerClass, linkClass)
+{
+    //Know problem: it won't throw a exception when a page is not found;
+    $(load_page_at).load(page_to_load, function(){
+        if(isReadMoreActive(page_to_load))
+        {
+            group_container_and_link(containerClass, linkClass);
+        }
+    });
+}
+
+function remove_menu_selection(menu_selection_class)
+{
+    var menu_selected = document.getElementsByClassName(menu_selection_class);
+    menu_selected[0].removeAttribute("class");
+}
+
+function set_menu_selection(add_selection_to, menu_selection_class)
+{
+    document.getElementById(add_selection_to).setAttribute("class", menu_selection_class);
+}
+
+function isReadMoreActive(pageUrl)
+{
+    var isActive = 0;
+
+    if(pageUrl == 'pages/post.html' || pageUrl == 'pages/pea.html')
+    {
+        isActive = 1;
+    }
+
+    return isActive;
+}
+
+function group_container_and_link(containerClass, linkClass)
+{
+    var container = document.getElementsByClassName(containerClass);
+    var link = document.getElementsByClassName(linkClass);
+
+    for(var a=0; a < container.length; a++)
+    {
+        container[a].setAttribute("id", containerClass + "#" + (a+1));
+        link[a].setAttribute("id", linkClass + "#" + (a+1));
+    }
+
+}
+
+function read_more(originElement, containerClass, linkClass){
+    id = regex_id(originElement);
+    var containerClass = document.getElementById(containerClass+"#"+id);
     
-    for(var a=0; a < postElem.length; a++){
-        postElem[a].setAttribute("id", "post#" + (a+1));
-        postLink[a].setAttribute("id", "post_link#" + (a+1));
+    if(isContentCollapsed(containerClass))
+    {
+        expandContent(originElement, containerClass);
+    }
+    else
+    {
+        collapseContent(originElement, containerClass);
     }
 
 }
 
-function read_more(e){
-    id = e.id.match(/\d+/g);
-    var temp = document.getElementById("post#"+id);
-    
-    if(temp.getAttribute("class") == "post_content collapsed"){
-        temp.setAttribute("class", "post_content expanded");
-        e.textContent="Ler menos";
-    }
-    else{
-        temp.setAttribute("class", "post_content collapsed");
-        e.textContent="Ler mais";
-    }
-
+function regex_id(e)
+{
+    return e.id.match(/\d+/g);
 }
 
-var UpdateDiv = {
+function isContentCollapsed(containerClass)
+{
+    var collapsed = 0;
 
-    //Update div without reloading entire page;
-    update: function(id, url){
+    if(containerClass.getAttribute("class") == "post_content collapsed")
+    {
+        collapsed = 1;
+    }
 
-        $(id).load(url, function(data, textStatus, xhr){
-            if(textStatus == "error"){
-                alert("Erro ao carregar a página");
-            }
+    return collapsed;
+}
 
-        });
+function expandContent(originElement, containerClass)
+{
+    containerClass.setAttribute("class", "post_content expanded");
+    originElement.textContent="Ler menos";
+}
 
-    },
-
-    //Update both div and menu selection;
-    update: function(id, url, element, className){
-
-        $(id).load(url, function(data, textStatus, xhr){
-            if(textStatus == "success" && element == "post"){
-                set_up_read_more();
-                var elem = document.getElementsByClassName(className);
-                elem[0].removeAttribute("class");
-                document.getElementById(element).setAttribute("class", className);
-            }
-            else{
-                if(textStatus == "success"){
-                    var elem = document.getElementsByClassName(className);
-                    elem[0].removeAttribute("class");
-                    document.getElementById(element).setAttribute("class", className);
-                }
-                else{
-
-                    if(textStatus == "error"){
-                        alert("Erro ao carregar a página");
-                    }
-
-                }
-            }
-
-        });
-
-    },
-
-};
+function collapseContent(originElement, containerClass)
+{
+    containerClass.setAttribute("class", "post_content collapsed");
+    originElement.textContent="Ler mais";
+}

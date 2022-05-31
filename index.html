@@ -49,10 +49,10 @@
                 <nav id="head_menu" class="div_centralize">
 
                     <ul>
-                        <a onclick="UpdateDiv.update('#head_content', 'pages/biography.html', 'biography', 'head_menu_selected')"><li id="biography" class="head_menu_selected">Biografia</li></a>
-                        <a onclick="UpdateDiv.update('#head_content','pages/formation.html', 'formation', 'head_menu_selected')"><li id="formation">Formações</li></a>
-                        <a onclick="UpdateDiv.update('#head_content','pages/experience.html', 'experience', 'head_menu_selected')"><li id="experience">Experiência</li></a>
-                        <a onclick="UpdateDiv.update('#head_content','pages/contact.html', 'contact', 'head_menu_selected')"><li id="contact">Contato</li></a>
+                        <a onclick="update_page_and_menu_selection('#head_content', 'pages/biography.html', 'biography', 'head_menu_selected')"><li id="biography" class="head_menu_selected">Biografia</li></a>
+                        <a onclick="update_page_and_menu_selection('#head_content','pages/formation.html', 'formation', 'head_menu_selected')"><li id="formation">Formações</li></a>
+                        <a onclick="update_page_and_menu_selection('#head_content','pages/experience.html', 'experience', 'head_menu_selected')"><li id="experience">Experiência</li></a>
+                        <a onclick="update_page_and_menu_selection('#head_content','pages/contact.html', 'contact', 'head_menu_selected')"><li id="contact">Contato</li></a>
                     </ul>
 
                 </nav>
@@ -65,8 +65,9 @@
                 
                     <div id="body_content_header_left">
                         <ul>
-                            <li><a id="post" class="body_menu_selected" onclick="UpdateDiv.update('#body_content_container', 'pages/post.html', 'post', 'body_menu_selected')">Postagens</a></li>
-                            <li><a id="project" onclick="UpdateDiv.update('#body_content_container', 'pages/project.html', 'project', 'body_menu_selected')">Projetos</a></li>
+                            <li><a id="post" class="body_menu_selected" onclick="update_page_and_menu_selection('#body_content_container', 'pages/post.html', 'post', 'body_menu_selected', 'post_content', 'link_read_more')">Postagens</a></li>
+                            <li><a id="project" onclick="update_page_and_menu_selection('#body_content_container', 'pages/project.html', 'project', 'body_menu_selected')">Projetos</a></li>
+                            <li><a id="pea" onclick="update_page_and_menu_selection('#body_content_container', 'pages/pea.html', 'pea', 'body_menu_selected', 'post_content', 'link_read_more')">PEA</a></li>
                         </ul>
                     </div>
 
@@ -91,7 +92,7 @@
                 </footer>
 
             </main>
-    
+
             <footer id="footer">
                 Site criado por Rangel Vieira Perico.
             </footer>

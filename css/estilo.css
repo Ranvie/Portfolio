@@ -235,7 +235,6 @@ body{
 }
 
 #body_content header{
-    overflow: hidden;
 }
 
 #body_content_header_left{
@@ -541,4 +540,14 @@ body{
 
 .text_color_red{
     color: red;
+}
+
+.pea_container{
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid forestgreen;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: -5px 5px 5px darkgrey;
 }
