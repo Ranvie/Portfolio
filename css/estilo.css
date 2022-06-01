@@ -412,6 +412,10 @@ body{
     margin: 15px;
 }
 
+.post_content li{
+    margin-left: 20px;
+}
+
 .post_content .post_img_default_center{
     width: 150px;
     margin-top: 15px;
